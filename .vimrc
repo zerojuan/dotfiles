@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasiser/vim-code-dark'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'valloric/youcompleteme'
@@ -27,7 +28,7 @@ filetype plugin indent on
 
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme codedark
 set backspace=2
 set history=50
 set ruler
@@ -45,6 +46,8 @@ set expandtab
 set nojoinspaces
 set autoindent
 set smartindent
+
+set guioptions=
 
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
