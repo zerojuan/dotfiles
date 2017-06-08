@@ -6,8 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasiser/vim-code-dark'
@@ -21,6 +23,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'svg.vim'
+Plugin 'burnettk/vim-angular'
+Plugin 'othree/html5.vim', { 'for': 'html' }
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
 filetype plugin indent on
@@ -69,3 +76,19 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_html_tidy_ignore_errors = [
+  \'proprietary attribute',
+  \'<svg> is not recognized',
+  \'discarding unexpected <svg>',
+  \'discarding unexpected </svg>',
+  \'<a> escaping malformed URI reference',
+  \]
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol = '×'
+let g:syntastic_warning_symbol = '▲'
+let g:syntastic_style_error_symbol = '×'
+let g:syntastic_style_warning_symbol = '×'
+
+let g:ctrlp_working_path_mode = 'ra'
