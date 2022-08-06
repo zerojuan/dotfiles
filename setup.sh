@@ -7,4 +7,6 @@ if ! [ -x "$(command -v omz)" ]; then
 fi
 
 rm -rf $HOME/.zshrc
-ln -sr ./.zshrc $HOME/.zshrc
+cp .zshrc $HOME/.zshrc
+
+chsh $(which zsh)
