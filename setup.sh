@@ -8,5 +8,3 @@ fi
 
 rm -rf $HOME/.zshrc
 cp .zshrc $HOME/.zshrc
-
-chsh $(which zsh)
