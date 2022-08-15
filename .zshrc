@@ -1,13 +1,7 @@
-#!/bin/sh
+export ZSH="$HOME/.oh-my-zsh"
 
-echo "Setting up development environment..."
+ZSH_THEME="minimal"
 
-# if ! [ -x "$(command -v omz)" ]; then
-if ! [ -d ~/.oh-my-zsh ]; then
-    /bin/sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-else
-    echo "OMZ already installed. Skipped."
-fi
+plugins=(git)
 
-rm -rf $HOME/.zshrc
-cp .zshrc $HOME/.zshrc
+source $ZSH/oh-my-zsh.sh
